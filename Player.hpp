@@ -19,10 +19,11 @@ namespace coup
     public:
         void income();
         void foreign_aid();
-        void coup(Player player);
+        void coup(Player &player);
         string role();
-        int coins();
-        Player(Game game, string name);
+        int coins() const;
+        string getName();
+        Player(Game &game,const string & name);
         ~Player();
 
     };

@@ -6,9 +6,9 @@ namespace coup
     class Contessa : public Player{
     public:
 
-        Contessa(Game game,string name);
+        Contessa(Game &game,const string & name);
         ~Contessa();
-        void block(Player player);
+        void block(Player &player);
 
     };
 }

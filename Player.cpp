@@ -2,19 +2,25 @@
 #include "Game.hpp"
 using namespace coup;
  
-Player::Player(Game game, string name){
+Player::Player(Game &game,const string & name){
     Player::p_name = name;
     Player::game = game;
+    Player::p_coins = 0;
 
 };
 
 Player::~Player(){};
-void Player::income(){};
-void Player::foreign_aid(){};
-void Player::coup(Player player){};
-string Player::role(){
-    return "test";
+string Player::getName(){
+    return p_name;
 };
-int Player::coins(){
-    return 0;
+void Player::income(){
+    p_coins += 1;
+};
+void Player::foreign_aid(){};
+void Player::coup(Player &player){};
+string Player::role(){
+    return p_role;
+};
+int Player::coins() const{
+    return p_coins;
 };
